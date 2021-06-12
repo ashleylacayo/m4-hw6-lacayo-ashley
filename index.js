@@ -11,15 +11,22 @@ function getPizzaOrder() {
   var pizza = {
     // set the 'cost' property to the basePrice
     // YOUR CODE HERE
+    // cost: basePrice 
   }
+  pizza.cost = basePrice
+
 
   var crust = prompt(
     `Please enter the type of crust (${formatPrice(thickCrustUpcharge)} upcharge for Thick crust)`
   )
   // set the pizza object's 'crust' property to the user's response
+  pizza.crust = crust
   // HINT: prompt() returns a string
   // HINT: You may wish to use .toLowerCase() and .trim()
   // if the user specified 'thick' crust, add thickCrustUpcharge
+  if (crust.toLowerCase().trim() === 'thick') {
+  pizza.cost += thickCrustUpcharge
+  }
   // to pizza.cost
   // YOUR CODE HERE
 
