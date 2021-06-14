@@ -42,10 +42,13 @@ function getPizzaOrder() {
 
   pizza.toppings = toppings.split(",")
   
-  if (toppings.toLowerCase().trim() === pizza.toppings.length) {
-  pizza.cost += (toppings.length * toppingsFee)
+  if (toppings.length) {
+    pizza.toppings = toppings.split(",")
   }
-
+  else {
+    pizza.toppings= []
+  } 
+  pizza.cost += (pizza.toppings.length * toppingsFee)
 
 
   var extraCheese = confirm ("Would you like extra cheese?")
